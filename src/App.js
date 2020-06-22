@@ -14,8 +14,8 @@ function App() {
 
   async function handleAddRepository() {
     const response = await api.post('repositories', {
-      title: 'title test',
-      url: 'http://github/test',
+      title: 'Desafio ReactJS',
+      url: 'https://github.com/test',
       techs: ['react'],
     });
 
@@ -37,7 +37,7 @@ function App() {
       <ul data-testid='repository-list'>
         {repositories.map((repository) => (
           <li key={repository.id}>
-            {repository.title} - id: {repository.id}
+            {repository.title}
             <button onClick={() => handleRemoveRepository(repository.id)}>
               Remover
             </button>
